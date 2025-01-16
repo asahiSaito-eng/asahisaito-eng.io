@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ラーメンオーダーシステム</title>
+  <link rel="stylesheet" href="mobil.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+      <img href="index.html" src="img/akari-logo.png" alt="ロゴ" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="mobil.html">モバイルオーダ</a></li>
+          <li><a href="index.html#news">お知らせ</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="container">
+      <!-- メニュー -->
+      <section id="menu">
+        <h2>ラーメンメニュー</h2>
+        <div class="menu-grid">
+          <div class="menu-item" data-name="特製醤油蕎麦" data-price="950">
+            <img src="img/shoyu.jpg" alt="醤油ラーメン">
+            <p>特製醤油ラーメン - ¥950</p>
+            <button onclick="selectRamen('特製醤油蕎麦', 950)">選択</button>
+          </div>
+          <div class="menu-item" data-name="特製たまり醤油" data-price="1000">
+            <img src="img/tamari.jpg" alt="特製たまり醤油">
+            <p>特製たまり醤油 - ¥1000</p>
+            <button onclick="selectRamen('特製たまり醤油', 1000)">選択</button>
+          </div>
+          <div class="menu-item" data-name="特製煮干し蕎麦" data-price="900">
+            <img src="img/tokuseniboshi.jpeg" alt="特製煮干しそば">
+            <p>特製煮干し蕎麦 - ¥900</p>
+            <button onclick="selectRamen('特製煮干し蕎麦', 900)">選択</button>
+          </div>
+           <div class="menu-item" data-name="特製魚介豚骨つけ麺" data-price="1200">
+            <img src="img/tukemen.jpg" alt="塩ラーメン">
+            <p>特製魚介豚骨つけ麺 - ¥1200</p>
+            <button onclick="selectRamen('特製魚介豚骨つけ麺', 1200)">選択</button>
+          </div>
+          <div class="menu-item" data-name="餃子５個" data-price="350">
+            <p>餃子 - ¥350</p>
+            <button onclick="selectRamen('餃子'350,)">選択</button>
+          </div>
+          <div class="menu-item" data-name="ビール" data-price="500">
+            <p>ビール - ¥500</p>
+            <button onclick="selectRamen(’ビール', 500)">選択</button>
+          </div>
+          <div class="menu-item" data-name="コーラ" data-price="200">
+            <p>コーラ - ¥200</p>
+            <button onclick="selectRamen('コーラ', 200)">選択</button>
+          </div>
+          <div class="menu-item" data-name="オレンジ" data-price="200">
+            <p>オレンジ - ¥200</p>
+            <button onclick="selectRamen('オレンジ', 200)">選択</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- トッピング -->
+      <section id="toppings" class="hidden">
+        <div class="modal">
+          <h2>トッピングを選択</h2>
+          <div class="topping-list">
+            <label><input type="checkbox" value="チャーシュー" data-price="150"> チャーシュー (+¥150)</label>
+            <label><input type="checkbox" value="味玉" data-price="100"> 味玉 (+¥100)</label>
+            <label><input type="checkbox" value="のり" data-price="50"> のり (+¥50)</label>
+            <label><input type="checkbox" value="めんま" data-price="120"> めんま (+¥120)</label>
+            <label><input type="checkbox" value="コーン" data-price="80"> コーン (+¥80)</label>
+            <label><input type="checkbox" value="手もみ麺" data-price="200"> 手もみ麺 (+¥200)</label>
+            <label><input type="checkbox" value="麺大盛り" data-price="250"> 麺大盛り (+¥250)</label>
+          </div>
+          <div class="buttons">
+            <button id="add-to-cart" onclick="addToCart()">カートに追加</button>
+            <button onclick="closeToppings()">閉じる</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- カート -->
+      <section id="cart">
+        <h2>カート</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">合計金額: ¥0</p>
+        <button onclick="placeOrder()">注文確定</button>
+      </section>
+    </div>
+
+    <!-- 注文履歴 -->
+    <section id="order-history">
+      <h2>注文履歴</h2>
+      <ul id="history-list"></ul>
+    </section>
+  </main>
+
+  <div id="confirmation-popup" class="hidden">
+    <h3 id="order-number"></h3>
+    <button id="close-popup" onclick="closePopup()">閉じる</button>
+  </div>
+
+ <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Akari Mendokoro Asahi Saito. All Rights Reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a>このサイトはコンテスト出展のために改変されたコンテンツです</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="mobil.js"></script>
+</body>
+
+
+</html>

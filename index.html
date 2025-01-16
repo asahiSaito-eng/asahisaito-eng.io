@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>麺処明り</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img href="index.html"src="img/akari-logo.png" alt="ロゴ" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="mobil.html">モバイルオーダ</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+  </section>
+
+  <section class="product-gallery">
+    <h2>人気の商品</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="img/shoyu.jpg" alt="特製醤油ラーメン">
+        <p>特製醤油ラーメン</p>
+      </div>
+      <div class="product-item">
+        <img src="img/tokuseniboshi.jpeg" alt="特製煮干しラーメン">
+        <p>特製煮干蕎麦</p>
+      </div>
+      <div class="product-item">
+        <img src="img/gentei1.jpeg" alt="豚骨魚介ラーメン">
+        <p>豚骨魚介ラーメン</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- お知らせセクション -->
+  <section class="news-section" id="news">
+    <h2>お知らせ</h2>
+    <ul class="news-list" id="news-list">
+      <!-- JavaScriptで動的にお知らせを追加 -->
+    </ul>
+  </section>
+  
+  <!-- アクセスセクション -->
+  <section class="access-section" id="access">
+    <h2>アクセス</h2>
+    <p class="access-details">
+      茨城県つくば市柴崎1050-1<br>
+      TXつくば駅から車で9分<br>
+      駐車場有
+    </p>
+  <div class="map-container">
+ 　<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.355884450928!2d140.11694497580692!3d36.109186572452266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602209cbd3e32daf%3A0xff244c06142ebc32!2z6bq65YemIOaYjuOCig!5e0!3m2!1sja!2sjp!4v1737043803680!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Akari Mendokoro Asahi Saito. All Rights Reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="https://x.com/mendokoro_akari">公式X</a></li>
+          <li><a href="https://www.instagram.com/mendokoro_akari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">公式インスタグラム</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a>このサイトはコンテスト出展のために改変されたコンテンツです</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  
+  <script>
+    // お知らせデータのサンプル
+    const newsData = [
+      {
+        title: "ラーメンwalker掲載！",
+        description: "当店がラーメンwalkerに掲載されました！付録の半券を是非ご利用ください。",
+        date: "20XX-XX-XX"
+      },
+      {
+        title: "期間限定塩そば登場！",
+        description: "ただいま期間限定で塩そばをご提供しています！ぜひお越しくださいませ。",
+        date: "20XX-XX-XX"
+      },
+      {
+        title: "モバイルオーダー始めました",
+        description: "お店の行列解消のため、モバイルオーダーを試験的に開始しました！ぜひご活用ください。ページトップのモバイルオーダーを選択するとご利用いただけます。",
+        date: "20XX-XX-XX"
+      },
+      {
+        title: "年末年始の営業に関して",
+        description: "12月31日は昼のみ営業、一月一日はお休み、となっております。ぜひお越しくださいませ。",
+        date: "20XX-XX-XX"
+      }
+    ];
+
+    // お知らせをリストに追加
+    const newsList = document.getElementById("news-list");
+
+    newsData.forEach(news => {
+      const newsItem = document.createElement("li");
+      newsItem.innerHTML = `
+        <h3>${news.title}</h3>
+        <p>${news.description}</p>
+        <time>${news.date}</time>
+      `;
+      newsList.appendChild(newsItem);
+    });
+  </script>
+
+</body>
+</html>

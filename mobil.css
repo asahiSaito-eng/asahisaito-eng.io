@@ -1,0 +1,255 @@
+/* 全体のスタイル */
+body {
+  font-family: 'Batang';
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f6;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #831F2B;
+  color: white;
+  padding: 10px 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right:30px; 
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+main {
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* メニュー */
+#menu {
+  border-left: 5px solid #831F2B;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  flex: 1 1 calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  max-width: 50%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #831F2B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #66151A;
+}
+
+/* トッピングをモーダル表示 */
+#toppings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#toppings:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toppings .modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#toppings h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+#toppings .topping-list {
+  margin-bottom: 20px;
+}
+
+#toppings label {
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#toppings .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#toppings .buttons button {
+  width: 45%;
+}
+
+/* カート */
+#cart {
+  border-left: 5px solid #831F2B;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #831F2B;
+}
+
+#total-price {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #831F2B;
+}
+
+#confirmation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+}
+
+#confirmation-popup h3 {
+  font-size: 36px;
+  color: #831F2B;
+}
+
+#confirmation-popup button {
+  background-color: #831F2B;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#confirmation-popup button:hover {
+  background-color: #66151A;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 注文履歴 */
+#order-history {
+  border-left: 5px solid #831F2B;
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #777;
+  background-color: #f4f4f4;
+}
+
+footer nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+footer nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+footer nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
